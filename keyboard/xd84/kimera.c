@@ -26,21 +26,21 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include "print.h"
 
 static uint8_t row_mapping[PX_COUNT] = {
-    0, 1, 2, 3, 4, 5, 6, 7,
+    0, 1, 2, 3, 4, 5, 6, UNCONFIGURED,
     UNCONFIGURED, UNCONFIGURED, UNCONFIGURED, UNCONFIGURED, UNCONFIGURED, UNCONFIGURED, UNCONFIGURED, UNCONFIGURED,
     UNCONFIGURED, UNCONFIGURED, UNCONFIGURED, UNCONFIGURED, UNCONFIGURED, UNCONFIGURED, UNCONFIGURED, UNCONFIGURED,
     UNCONFIGURED, UNCONFIGURED, UNCONFIGURED, UNCONFIGURED, UNCONFIGURED, UNCONFIGURED, UNCONFIGURED, UNCONFIGURED
 };
 static uint8_t col_mapping[PX_COUNT] = {
-    8, 9, 10, 11, 12, 13, 14, 15,
-    16, 17, 18, 19, 20, 21, 22, 23,
+	17, 18, 19, 20, 21, 22, 23,
     24, 25, 26, 27, 28, 29, 30, 31,
+    UNCONFIGURED, UNCONFIGURED, UNCONFIGURED, UNCONFIGURED, UNCONFIGURED, UNCONFIGURED, UNCONFIGURED, UNCONFIGURED, UNCONFIGURED,
     UNCONFIGURED, UNCONFIGURED, UNCONFIGURED, UNCONFIGURED, UNCONFIGURED, UNCONFIGURED, UNCONFIGURED, UNCONFIGURED
 };
-static uint8_t row_count = 8;
-static uint8_t col_count = 24;
-static uint8_t row_left_count = 8;
-static uint8_t col_left_count = 24;
+static uint8_t row_count = 6;
+static uint8_t col_count = 15;
+static uint8_t row_left_count = 6;
+static uint8_t col_left_count = 15;
 static matrix_row_t col_left_mask;
 static uint8_t combining = COMBINING_NONE;
 static uint8_t data[EXP_COUNT][EXP_PORT_COUNT];
